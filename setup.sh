@@ -46,6 +46,5 @@ sudo chmod -R 777 /usr/local/bin/laravel
 echo "### Tidy and reboot"
 cd ~
 rm -rf /temp
-sudo reboot
 
-echo "### That's it, we're done!"
+echo "### That's it, we're done! Get working!"
