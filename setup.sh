@@ -41,6 +41,7 @@ sudo cp laravel.phar /usr/local/bin/laravel
 
 echo "### Set permissions"
 sudo chmod -R 777 /vagrant
+sudo chmod -R 777 /usr/local/bin/laravel
 
 echo "### Tidy and reboot"
 cd ~
