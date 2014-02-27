@@ -22,7 +22,7 @@ echo "### Install web packages"
 sudo apt-get -qq install build-essential nginx php5-fpm php-pear php5-cli php5-gd php5-curl php5-common php5-mysql php-apc php-console-table libmcrypt4 php5-mcrypt php5-memcached php5-json
 
 echo "### Set up nginx"
-wget http://jamieshepherd.me/downloads/default
+wget https://raw.github.com/jamieshepherd/vagrant/master/setup.sh
 sudo cp default /etc/nginx/sites-available/default
 
 echo "### Install mariadb"
