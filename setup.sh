@@ -19,7 +19,7 @@ mkdir /temp
 cd /temp
 
 echo "### Install web packages"
-sudo apt-get -qq install build-essential nginx php5-fpm php-pear php5-cli php5-gd php5-curl php5-common php5-mysql php-apc php-console-table libmcrypt4 php5-mcrypt php5-memcached php5-json
+sudo apt-get -qq install build-essential nginx php5-fpm php-pear php5-cli php5-gd php5-curl php5-common php5-mysql php-apc php-console-table libmcrypt4 php5-mcrypt php5-memcached php5-json curl
 
 echo "### Set up nginx"
 wget https://raw.github.com/jamieshepherd/vagrant/master/default
