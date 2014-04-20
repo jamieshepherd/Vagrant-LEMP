@@ -6,5 +6,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	# Use port 4567 (http://127.0.0.1:4567)
 	config.vm.network :forwarded_port, host: 4567, guest: 80
 	# Set up provision	
-	config.vm.provision :shell, :path => "setup.sh"
+	config.vm.provision :shell, :path => "https://raw.github.com/jamieshepherd/vagrant/master/setup.sh"
 end
