@@ -19,7 +19,7 @@ mkdir /temp
 cd /temp
 
 echo "### Install web packages"
-sudo apt-get -qq install build-essential nginx php5-fpm php-pear php5-cli php5-gd php5-curl php5-common php5-mysql php-apc php-console-table libmcrypt4 php5-mcrypt php5-memcached php5-json curl
+sudo apt-get -qq install build-essential nginx php5-fpm php-pear php5-cli php5-gd php5-curl php5-common php5-mysql php-apc php-console-table libmcrypt4 php5-mcrypt php5-memcached php5-json curl ruby-full rubygems
 
 echo "### Set up nginx"
 wget https://raw.github.com/jamieshepherd/vagrant/master/default
@@ -40,6 +40,9 @@ sudo mv composer.phar /usr/local/bin/composer
 echo "### Install laravel PHAR archive"
 wget http://laravel.com/laravel.phar
 sudo cp laravel.phar /usr/local/bin/laravel
+
+echo "### Installing Sass"
+sudo gem install sass
 
 echo "### Set permissions"
 sudo chmod -R 777 /vagrant
