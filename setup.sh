@@ -2,24 +2,22 @@
 
 echo "### Setup provisioning started"
 echo "### Updating package list (this will take a few minutes)"
-echo "### Remove -qq in setup.sh to see the full output"
-sudo apt-get -qq update
+sudo apt-get update
 
 echo "### Add mariadb to packages"
-sudo apt-get -qq install python-software-properties
+sudo apt-get install python-software-properties
 sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xcbcb082a1bb943db
 sudo add-apt-repository 'deb http://mirrors.coreix.net/mariadb/repo/10.0/ubuntu precise main'
 
 echo "### Updating package list AGAIN (this will take a few minutes)"
-echo "### Remove -qq in setup.sh to see the full output"
-sudo apt-get -qq update
+sudo apt-get update
 
 echo "### Create temp folder to work from"
-mkdir /temp
+sudo mkdir /temp
 cd /temp
 
 echo "### Install web packages"
-sudo apt-get -qq install build-essential nginx php5-fpm php-pear php5-cli php5-gd php5-curl php5-common php5-mysql php-apc php-console-table libmcrypt4 php5-mcrypt php5-memcached php5-json curl ruby-full rubygems
+sudo apt-get install build-essential nginx php5-fpm php-pear php5-cli php5-gd php5-curl php5-common php5-mysql php-apc php-console-table libmcrypt4 php5-mcrypt php5-memcached php5-json curl ruby-full rubygems
 
 echo "### Set up nginx"
 wget https://raw.github.com/jamieshepherd/vagrant/master/default
@@ -50,6 +48,6 @@ sudo chmod -R 777 /usr/local/bin/laravel
 
 echo "### Tidy and reboot"
 cd ~
-rm -rf /temp
+sudo rm -rf /temp
 
 echo "### That's it, we're done! Get working!"
