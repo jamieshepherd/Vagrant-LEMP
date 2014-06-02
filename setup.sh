@@ -15,15 +15,15 @@ echo "### Remove -qq in setup.sh to see the full output"
 sudo apt-get -qq update
 
 echo "### Create temp folder to work from"
-mkdir /temp
+sudo mkdir /temp
 cd /temp
 
 echo "### Install web packages"
 sudo apt-get -qq install build-essential nginx php5-fpm php-pear php5-cli php5-gd php5-curl php5-common php5-mysql php-apc php-console-table libmcrypt4 php5-mcrypt php5-memcached php5-json curl ruby-full rubygems
 
 echo "### Set up nginx"
-wget https://raw.github.com/jamieshepherd/vagrant/master/default
-wget https://raw.github.com/jamieshepherd/vagrant/master/nginx.conf
+sudo wget https://raw.github.com/jamieshepherd/vagrant/master/default
+sudo wget https://raw.github.com/jamieshepherd/vagrant/master/nginx.conf
 sudo cp default /etc/nginx/sites-available/default
 sudo cp nginx.conf /etc/nginx/nginx.conf
 
@@ -38,7 +38,7 @@ curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
 
 echo "### Install laravel PHAR archive"
-wget http://laravel.com/laravel.phar
+sudo wget http://laravel.com/laravel.phar
 sudo cp laravel.phar /usr/local/bin/laravel
 
 echo "### Installing Sass"
@@ -50,6 +50,6 @@ sudo chmod -R 777 /usr/local/bin/laravel
 
 echo "### Tidy and reboot"
 cd ~
-rm -rf /temp
+sudo rm -rf /temp
 
 echo "### That's it, we're done! Get working!"
