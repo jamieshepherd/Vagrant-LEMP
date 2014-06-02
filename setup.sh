@@ -47,6 +47,7 @@ sudo chmod -R 777 /usr/local/bin/laravel
 echo "### Enable mcrypt"
 sudo php5enmod mcrypt
 sudo restart php5-fpm
+sudo service nginx restart
 
 echo "### Tidy and reboot"
 cd ~
