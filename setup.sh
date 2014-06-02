@@ -20,8 +20,8 @@ echo "### Install web packages"
 sudo apt-get install build-essential nginx php5-fpm php-pear php5-cli php5-gd php5-curl php5-common php5-mysql php-apc php-console-table libmcrypt4 php5-mcrypt php5-memcached php5-json curl ruby-full rubygems
 
 echo "### Set up nginx"
-sudo wget https://raw.github.com/jamieshepherd/vagrant/master/default
-sudo wget https://raw.github.com/jamieshepherd/vagrant/master/nginx.conf
+sudo wget https://raw.github.com/jamieshepherd/Vagrant-LEMP/master/default
+sudo wget https://raw.github.com/jamieshepherd/Vagrant-LEMP/master/nginx.conf
 sudo cp default /etc/nginx/sites-available/default
 sudo cp nginx.conf /etc/nginx/nginx.conf
 
