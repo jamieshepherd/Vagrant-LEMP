@@ -5,19 +5,19 @@ echo "### Updating package list (this will take a few minutes)"
 sudo apt-get update
 
 echo "### Add mariadb to packages"
-sudo apt-get install python-software-properties
+sudo apt-get -y install python-software-properties
 sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xcbcb082a1bb943db
 sudo add-apt-repository 'deb http://mirrors.coreix.net/mariadb/repo/10.0/ubuntu precise main'
 
 echo "### Updating package list AGAIN (this will take a few minutes)"
-sudo apt-get update
+sudo apt-get -y update
 
 echo "### Create temp folder to work from"
-sudo mkdir /temp
+mkdir /temp
 cd /temp
 
 echo "### Install web packages"
-sudo apt-get install build-essential nginx php5-fpm php-pear php5-cli php5-gd php5-curl php5-common php5-mysql php-apc php-console-table libmcrypt4 php5-mcrypt php5-memcached php5-json curl ruby-full rubygems
+sudo apt-get -y install build-essential nginx php5-fpm php-pear php5-cli php5-gd php5-curl php5-common php5-mysql php-apc php-console-table libmcrypt4 php5-mcrypt php5-memcached php5-json curl ruby-full rubygems
 
 echo "### Set up nginx"
 sudo wget https://raw.github.com/jamieshepherd/Vagrant-LEMP/master/default
@@ -48,6 +48,6 @@ sudo chmod -R 777 /usr/local/bin/laravel
 
 echo "### Tidy and reboot"
 cd ~
-sudo rm -rf /temp
+rm -rf /temp
 
 echo "### That's it, we're done! Get working!"
