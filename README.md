@@ -1,20 +1,15 @@
-Vagrant (LEMP)
-==============
+#Vagrant (LEMP)
+##Updated for Ubuntu 14.04
 
-This is the main vagrantfile, setup.sh and nginx server config I use in many of my projects. Just type **vagrant up** with the vagrantfile the project directory. It installs a LEMP stack (Linux, Nginx, MariaDB, PHP) as well as composer and laravel.
+This is the main vagrantfile, setup.sh and nginx server config I use in many of my projects. Just type `vagrant up` with the vagrantfile the project directory. It installs a LEMP stack (Ubuntu 14.04, nginx, MariaDB, PHP) as well as Composer, Laravel and Sass.
 
 ### Requirements ###
-* Vagrant
+* Vagrant (1.6+)
 * VirtualBox (4.2+)
+*These are recommended requirements, this stack may work on earlier versions but is untested.*
 
 ### Installation ###
-* Download the repository
 * Place the Vagrantfile in your project directory
-* If you don't have a precise32 box, install one first
-* cd into your project directory, and type **vagrant up**
-* Wait for the virtualbox to be deployed (this could take a couple minutes)
-* Navigate to 127.0.0.1:4567 to see your provisioned vagrant VM
-
-### Troubleshooting ###
-* Obviously, an internet connection is needed to install vagrant + provisions
-* If the address at 127.0.0.1:4567 does not work immediately, try restarting the vagrant machine (**vagrant halt** followed by **vagrant up**) - This sometimes happens if ports are in use, but is generally cleared by a reset
+* `cd` to your project directory, type `vagrant up`
+* Wait for the virtualbox to be provisioned and deployed (may take a few minutes)
+* Navigate to 127.0.0.1:4567 to see your newly provisioned VM
